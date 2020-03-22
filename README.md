@@ -16,7 +16,7 @@ In this example we need a DNS name and nginx-proxy. This is one of best containe
 First point you domain name to the ip address of the docker host server. (This can either be a 'A', 'AAAA' or 'CNAME' record)
 
 ```
-docker run --d --name nginx-proxy \
+docker run -d --name nginx-proxy \
     --publish 80:80 \
     --publish 443:443 \
     --volume /etc/nginx/certs \
