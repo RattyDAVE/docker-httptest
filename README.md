@@ -9,6 +9,18 @@ TINY docker container that shows uname -a when you send it a http request. Usefu
 docker run -d --rm --name httptest -p 80:8000 rattydave/httptest
 ```
 
+
+## Auto Update
+
+To automatically update I recomend using watchtower.
+
+```
+docker run -d \
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  v2tec/watchtower 
+```
+
 ## Reverse Proxy Setup
 
 In this example we need a DNS name and nginx-proxy. This is one of best containers out there and easy to use.
